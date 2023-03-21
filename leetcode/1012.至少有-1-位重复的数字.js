@@ -31,7 +31,16 @@ var numDupDigitsAtMostN = function(n) {
     }
 
     //位数等于n的个数
-    //若n = 9527，length = 4，四位数有(9-1)*(8-1)*(7-1)*(6-1)+(5-1)()个不重复数字
+    //n=9527
+    let num = n
+    let dig = new Set
+    for (let i = length-1; i >= 0 ; i--) {
+        let equal = Math.floor(num / Math.pow(10, i))
+        for (let j = i === length-1 ? 1 : 0; j < 0; j++) {
+            if (!dig.has(equal)) {}
+        }
+    }
+
     
 
 
