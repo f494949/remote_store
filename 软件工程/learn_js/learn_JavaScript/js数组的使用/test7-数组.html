@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr = ['刘德华', '张学友', '黎明', '郭富城']
+        // arr.push('万达影业')
+        // console.log(arr.push('万达影业'))/* 末尾新增 */
+        // console.log(arr.unshift('万达影业'))/* 开头新增 */
+        console.log(arr.pop())//删除最后一个元素
+        console.log(arr.shift())//删除第一个元素
+
+        // arr.splice(起始位置,删除几个元素)
+        
+        // console.log(arr[0])
+        // console.log(arr[2])
+        // console.log(arr.length) 
+        /* let arr = ['星期一','星期二','星期三','星期四','星期五','星期六','星期天']
+        console.log(arr[6]); */
+
+        // 遍历数组中大于等于10的数字
+        let arr = [2,0,6,1,77,0,52,0,25,7]
+        let newArr = []
+        for (let i = 0; i < arr.length; i++) {
+            if (i >= 10) {
+             newArr.push(arr[i])   
+            }
+        }
+        console.log(newArr)
+
+    </script>
+</body>
+</html>

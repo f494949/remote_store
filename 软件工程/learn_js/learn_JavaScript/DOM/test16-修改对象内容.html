@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">我是文字的内容</div> //div.box
+
+    <script>
+        //获取元素
+        const box = document.querySelector('box')
+        //console.log(box.innerText) //获取文字内容
+
+        //修改文字内容
+
+        //add()追加类名，并且是字符串
+        // box.classList.add('active')
+
+        //remove()删除类 
+        // box.classList.remove('box')
+
+        //toggle()切换类,有就删除，没有就加上
+        //box.classList.toggle('active')
+
+       // box.innerText = '我是一个盒子'
+        //box.innerText = '<strong>我是一个盒子</strong>' //不解析标签
+
+        //解析标签 innerHTML
+       console.log(box.innerHTML)
+       box.innerHTML = '<strong>我是一个盒子</strong>'
+
+    </script>
+</body>
+</html>
