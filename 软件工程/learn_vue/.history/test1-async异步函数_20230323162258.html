@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-      // 控制台先打印后进先出，再打印helloworld，async函数没有对后面的代码执行造成阻塞,返回promise对象
+      // 控制台先打印后进先出，再打印helloworld，async函数没有对后面的代码执行造成阻塞
       // async function timeout() {
       //   return 'helloworld'
       // }
@@ -18,11 +18,11 @@
         if (flag) {
           return 'helloworld'
         } else {
-          throw 'it is a failre'
+          th
         }
       }
-      console.log(timeout(true)) 
-      console.log(timeout(false).catch(err => console.log(err)))
+      timeout(true)
+      timeout(false)
     </script>
   </body>
 </html>
