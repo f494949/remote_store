@@ -17,7 +17,9 @@
 //r = [2,3,5]
 //answer = [f,f,f]
 //结果应为[t,f,t]
-
+//error：1.将排序和判断放入便利循环体中
+//       2.判断的循环体中k的最大值写成数组元素总数，由于数组下标由0开始，故k应是元素总数-1
+//最终解决
 var checkArithmeticSubarrays = function(nums, l, r) {
     let judge = []
     let answer = []  
