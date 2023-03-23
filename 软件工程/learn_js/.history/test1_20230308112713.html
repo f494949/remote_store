@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 200px;
+            height: 400px;
+            background-color: red;
+        }
+
+        .son {
+            width: 200px;
+            height: 400px;
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <button>按钮</button>
+    <script>
+        // const fa = document.querySelector('.father')
+        // const so = document.querySelector('.son')
+        // document.addEventListener('click',function() {
+        //     alert('ye')
+        // })
+        // fa.addEventListener('click',function() {
+        //     alert('fa')
+        // })
+        // so.addEventListener('click',function(e) {
+        //     alert('son')
+        //     e.stopPropagation()
+        // })
+        const father = document.querySelector('.father')
+        
+        const btn = document.querySelector('button')
+        function fu()  {
+            alert(0)
+        } 
+        btn.addEventListener('click',fu)
+    </script>
+</body>
+</html>

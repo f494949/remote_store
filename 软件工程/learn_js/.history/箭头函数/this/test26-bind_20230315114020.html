@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>禁用</button>
+    <script>
+        const obj = {
+            age: 18
+        }
+        function fn() {
+            console.log(this);
+        }
+
+        //bind不会调用函数
+        // 能改变this指向
+        // 返回值是函数，函数中的this是更改过的obj
+        const fun = fn.bind(obj)
+        fun()
+
+        //一个按钮，点击
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', function() {
+            this.disabled = true
+            window.setTimeout(function() {
+                this.disabled = false
+            }.bind(btn),2000) 
+        })
+    </script>
+</body>
+</html>

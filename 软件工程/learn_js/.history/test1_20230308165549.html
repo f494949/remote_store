@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+    //    console.log(location.href)
+    // location.href = 'http://www.baidu.com'
+    // search
+    // // reload 
+    // const str = '发生家乐福'
+    // const rew = /发生/
+    console.log(/^ha/.test('ha'))//true
+    console.log(/^ha$/.test('haha'));
+    console.log(rew.test(str))
+    setTimeout('click',function() {
+        console.log('延迟2秒')
+    },2000)
+    </script>
+</body>
+</html>

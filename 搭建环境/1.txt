@@ -1,0 +1,3 @@
+后端框架 （php+vue）：https://gitee.com/suiyuewuxin/Ity.git
+git环境：https://blog.csdn.net/aiwangtingyun/article/details/89379506
+php环境：https://www.xp.cn/download.html
