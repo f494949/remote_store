@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <div class="messagesBox-BigRight-down20-input">
+      <div style="z-index: 9999">
+          <el-input class="inputmsg"
+                    type="textarea"
+                    :rows="4"
+                    placeholder="请输入内容"
+                    v-model="messagesContents"
+                    ref="count"
+                    @keydown.native="listen($event)">
+          </el-input>
+      </div>
+  
+  </div>
+  <div :style="messagesBoxBigRightBotton">
+      <button class="sendMessageBtn" @click="sendMessage()">发送</button>
+  </div>
+
+    
+      
+  </head>
+
+  <body>
+    <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>          
+      /* axios配置 请求-处理-响应*/
+      axios.defaults.timeout = 2000 /*响应时间*/
+      axios.defaults.headers.post['Content-Type'] =
+        'application/x-www-form-urlencoded;charset=UTF-8' // 配置post请求头
+      axios.defaults.headers.get['Content-Type'] =
+        'application/json;charset=UTF-8' // 配置get请求头
+      axios.defaults.baseURL = 'http://www.syf.com' // 配置接口地址
+      
+      axios
+        .post('http://www.syf.com/learn.php', params)
+        .then(
+          (response) => {
+            console.log(response)
+          },
+          (err) => {
+            console.log(err)
+          }
+        )
+        .catch((error) => {
+          console.log(error)
+        })
+
+      // Vue.prototype.$http = axios;
+      let app = new Vue ({
+        data: {
+          
+        },
+        methods: {
+          listen(event) {
+     if (event.ctrlKey  && event.keyCode === 13) {
+     // if (event.shiftKey && event.keyCode === 13) {
+       console.log("换行");
+       this.messagesContents += '\n';
+     } else if (event.keyCode === 13) {
+       event.preventDefault(); // 阻止浏览器默认换行操作*/
+       this.sendMessage(); // 发送文本
+     }
+   },
+————————————————
+版权声明：本文为CSDN博主「waillyer」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/waillyer/article/details/108507169
+        }
+      })
+
+    </script>
+  </body>
+</html>
