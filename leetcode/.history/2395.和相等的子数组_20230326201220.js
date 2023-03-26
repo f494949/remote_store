@@ -20,6 +20,6 @@ var findSubarrays = function(nums) {
         seen.add(sum);
     }
     return false;
-}
+};
 // @lc code=end
 
