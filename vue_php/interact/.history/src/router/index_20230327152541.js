@@ -3,6 +3,6 @@ import Vue from 'vue-router'
 
 Vue.use(Router)
 
-export default new Router ({
-    routes: []
-})
+export default new Router {
+    
+}
