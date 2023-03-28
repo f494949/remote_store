@@ -3,7 +3,9 @@ $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "test";
-
+$name = $_GET['name'];
+$message = $_GET['message'];
+ 
 // 创建连接
 $conn = mysqli_connect($servername, $username, $password, $dbname);
  

@@ -1,19 +1,11 @@
 <template>
   <div class="app-container">
     <el-row>
-      <el-col :span="24">
-        <el-col :span="24">
-          <h2>在线人数: {{ count }}</h2>
-        </el-col>
-
+      <el-col :span="24">        
         <el-col id="chatRecord" :span="24" class="content padding-15">
-          <!-- <el-col v-for="(item, index) in groupChat" :key="index" :span="24" :class="clientId === item.clientId ? 'text-right' : ''">
-            <p>{{ item.name }} <small style="color: #909399">{{ rTime(item.created_at) }}</small></p>
+          <el-col v-for="(item, index) in groupChat" :key="index" :span="24" :class="clientId === item.clientId ? 'text-right' : ''">
+            <p>{{ item.name }}</p>
             <p>{{ item.message }}</p>
-          </el-col>  -->
-          <el-col>
-            <!-- <textarea v-model="send"></textarea> -->
-            <p id="text" />
           </el-col>
         </el-col>
 
@@ -44,16 +36,22 @@
 <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script type="module">
-  import { listMsg, sendMsg } from '../api/learn'
+  // import { listMsg, sendMsg } from '../api/learn'
   export default {
-    name: 'chat',
+    name: 'index',
     data() {
       return {
-        
+        textarea: '',
+        clientId: '',
+        groupChat: []
       }
     },
     methods: {
-      
+      getData () {
+        anxios.get('api/learn.php').then(function (res) {
+          this.name = res.data
+        }).catch(function (console.error()))
+      }
     },
   }
 </script>
