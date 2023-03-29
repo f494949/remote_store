@@ -19,6 +19,7 @@ if(!$result){
 	echo("fail to insert data");
 }else{
 	echo("sucess in insert data");
+	
 }
 @ mysqli_free_result($result);
 mysqli_close($db);

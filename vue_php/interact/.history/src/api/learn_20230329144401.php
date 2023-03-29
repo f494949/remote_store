@@ -18,7 +18,7 @@ $result = mysqli_query($conn,$operate);
 if(!$result){
 	echo("fail to insert data");
 }else{
-	echo("sucess in insert data");
+	echo($);
 }
 @ mysqli_free_result($result);
 mysqli_close($db);

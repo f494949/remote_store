@@ -12,7 +12,6 @@ if ($conn->connect_error) {
     die("连接失败: " . $conn->connect_error);
 }
 
-$messaage = $_POST["message"];
 $operate = "insert into test values('syf', '$message')";
 $result = mysqli_query($conn,$operate);
 if(!$result){

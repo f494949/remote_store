@@ -5,23 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style></style>
+    <style>      
+    </style>
   </head>
   <body>
-    <div action="learn.php" method="POST">
-      <input type="text" name="message" placeholder="请输入想说的话" />
-      <input name="login" type="button" value="发送" onclick="send()" />
-      <p>{{vue.data}}</p>
-    </div>
+    <form action="login.php" method="POST">
+      <input  type="text" name="name" placeholder="请输入用户名"/>
+      <input  type="password" name="password" placeholder="请输入密码"/>
+        <input name="login" type="button" value="登录" onclick=submit() />
+    </form>
+    
 
     <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-      const vue = {
+      export default {
         name: 'index',
         data() {
           return {
-            message: '',
+            textarea: '',
+            groupChat: [],
           }
         },
         methods: {
@@ -39,7 +42,8 @@
           send() {
             anxios
               .post('http://localhost/api/learn.php', {
-                data: {          
+                data: {
+                  name: this.name,
                   message: this.message,
                 },
               })

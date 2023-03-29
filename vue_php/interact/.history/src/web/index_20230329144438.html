@@ -10,14 +10,14 @@
   <body>
     <div action="learn.php" method="POST">
       <input type="text" name="message" placeholder="请输入想说的话" />
-      <input name="login" type="button" value="发送" onclick="send()" />
-      <p>{{vue.data}}</p>
+      <input name="login" type="button" value="shu'ru" onclick="submit()" />
+      <p>{{message}}</p>
     </div>
 
     <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-      const vue = {
+      export default {
         name: 'index',
         data() {
           return {
