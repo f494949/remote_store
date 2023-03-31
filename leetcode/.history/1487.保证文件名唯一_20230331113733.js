@@ -11,8 +11,10 @@
  */
 
 // 哈希表
-// 执行用时：164 ms, 在所有 JavaScript 提交中击败了80.78%的用户
-// 内存消耗：63.3 MB, 在所有 JavaScript 提交中击败了25.56%的用户
+执行用时：164 ms, 在所有 JavaScript 提交中击败了80.78%的用户
+内存消耗：63.3 MB, 在所有 JavaScript 提交中击败了
+25.56%
+的用户
 var getFolderNames = function(names) {
     const length = names.length
     const hash = new Map()
