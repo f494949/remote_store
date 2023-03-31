@@ -28,5 +28,6 @@ var numRabbits = function(answers) {
     }
     return ans;
 };
+
 // @lc code=end
 
