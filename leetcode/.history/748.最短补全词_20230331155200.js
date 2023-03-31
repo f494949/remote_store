@@ -11,8 +11,16 @@
  * @return {string}
  */
 
-// 执行用时：88 ms, 在所有 JavaScript 提交中击败了44.94%的用户
-// 内存消耗：46.1 MB, 在所有 JavaScript 提交中击败了52.81%的用户
+// 执行用时：
+88 ms
+, 在所有 JavaScript 提交中击败了
+44.94%
+的用户
+内存消耗：
+46.1 MB
+, 在所有 JavaScript 提交中击败了
+52.81%
+的用户
 var shortestCompletingWord = function(licensePlate, words) {
     // 将licensePlate中字母出现次数遍历出来
     const arr = new Array(26).fill(0)
