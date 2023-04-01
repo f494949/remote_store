@@ -46,7 +46,7 @@
     methods: {
       getData() {
         this.$axios
-          .post('http://localhost/api/data.php', {message: this.message})
+          .post('http://localhost/api/data.php', )
           .then(function(res) {
             console.log(res.data)
           })
