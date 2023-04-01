@@ -58,8 +58,7 @@
       send() {
         console.log(this.textarea, '发送信息')
         if (this.textarea !== '') {
-          this.groupChat.push({align: 'right', message: this.textarea})
-          this.textarea = ''
+          await this.groupChat.push({align: 'right', message: this.textarea})
           this.getData()
         }
       },

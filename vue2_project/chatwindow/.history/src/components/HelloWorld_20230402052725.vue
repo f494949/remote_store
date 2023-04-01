@@ -3,7 +3,7 @@
     <el-row>
       <el-col :span="24">
         <el-col id="chatRecord" :span="24" class="content padding-15">
-          <el-col v-for="(item, index) in groupChat" :key="index" :span="24" >
+          <el-col v-for="(item, index) in groupChat" :key="index" :span="24" :class="clientId === item.clientId ? 'text-right' : ''">
             <p>{{ item.message }}</p>
           </el-col>
         </el-col>
@@ -55,12 +55,10 @@
           })
       },
 
-      send() {
+      async send() {
         console.log(this.textarea, '发送信息')
         if (this.textarea !== '') {
-          this.groupChat.push({align: 'right', message: this.textarea})
-          this.textarea = ''
-          this.getData()
+          await
         }
       },
     },

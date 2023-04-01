@@ -60,7 +60,6 @@
         if (this.textarea !== '') {
           this.groupChat.push({align: 'right', message: this.textarea})
           this.textarea = ''
-          this.getData()
         }
       },
     },
