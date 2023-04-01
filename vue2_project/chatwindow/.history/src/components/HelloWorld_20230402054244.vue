@@ -58,7 +58,7 @@
       send() {
         console.log(this.textarea, '发送信息')
         if (this.textarea !== '') {
-          this.groupChat.push({message: this.textarea})
+          this.groupChat.push({text-align: 'right', message: this.textarea})
           this.textarea = ''
           this.getData()
         }
@@ -67,6 +67,7 @@
   }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .content {
     background: rgb(245, 245, 245);
