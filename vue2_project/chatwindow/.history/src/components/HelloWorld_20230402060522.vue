@@ -48,7 +48,7 @@
         this.$anxios
           .post('http://localhost/api/data.php')
           .then(function(res) {
-            console.log(res.data)
+            console.log()
           })
           .catch(function(error) {
             console.error()
