@@ -1,0 +1,45 @@
+<?php
+echo 123;
+die
+header('Access-Control-Allow-Origin: *');
+
+header('Access-Control-Allow-Credentials: true'); // 设置是否允许发送 cookies
+
+header('Access-Control-Expose-Headers: *');  //服务器 headers 白名单，可以让客户端进行访问
+
+header('Access-Control-Allow-Headers: *');
+
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "test";
+
+// 创建连接
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+echo $messaage;
+// 检测连接
+if ($conn->connect_error) {
+
+    die("连接失败: " . $conn->connect_error);
+}
+
+// $sql="select * from test";
+// $result = mysqli_query($conn,$sql);
+// if(mysqli_num_rows($result)>0){
+//     while ($row=mysqli_fetch_assoc($result))
+//     {
+//         echo json_encode($row);
+//     }
+// }
+
+$messaage = $_POST["message"];
+$operate = "insert into test values('syf', '$message')";
+$result = mysqli_query($conn,$operate);
+if(!$result){
+	echo("fail to insert data");
+}else{
+	echo("sucess in insert data");
+}
+@ mysqli_free_result($result);
+mysqli_close($conn);
+?>
