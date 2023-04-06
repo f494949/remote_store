@@ -9,7 +9,7 @@ import http from '../utils/http'
 // get请求
 const testApi = {
   postListAPI (params) {
-    return http.post('/api/api/data.php', params) // 离谱失误，开始未将代理api路径添加，导致一直跨域报错
+    return http.post('/api/api/data.php', params) // 离谱失误
   }
   // // 企业刊物列表
   // postList2API (params) {
