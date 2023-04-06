@@ -9,7 +9,7 @@ import http from '../utils/http'
 // get请求
 const testApi = {
   postListAPI (params) {
-    return http.post('/api/api/data.php', params)
+    return http.post('/spi/api/data.php', params)
   }
   // // 企业刊物列表
   // postList2API (params) {

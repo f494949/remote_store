@@ -34,8 +34,8 @@ if ($conn->connect_error) {
 // $request = $_POST;
 
 $request = json_decode(@file_get_contents( 'php://input'));
-// var_dump($request);
-// die;
+var_dump($request);
+die;
 $operate = "insert into test (name, message) values ('syf', '$request')";
 $result = mysqli_query($conn,$operate);
 if(!$result){

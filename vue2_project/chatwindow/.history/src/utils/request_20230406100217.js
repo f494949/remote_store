@@ -18,7 +18,7 @@ service.interceptors.request.use(
     // 发请求前做的一些处理，数据转化，配置请求头，设置token,设置loading等，根据需求去添加
     config.data = JSON.stringify(config.data) // 数据转化,也可以使用qs转换
     config.headers = {
-      'Content-Type': 'application/json; charset=UTF-8' // 配置请求头
+      'Content-Type': 'application/; charset=UTF-8' // 配置请求头
     }
     // 如有需要：注意使用token的时候需要引入cookie方法或者用本地localStorage等方法，推荐js-cookie
     // const token = getCookie('名称');//这里取token之前，你肯定需要先拿到token,存一下

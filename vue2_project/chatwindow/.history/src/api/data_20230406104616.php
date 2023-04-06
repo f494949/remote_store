@@ -30,12 +30,12 @@ if ($conn->connect_error) {
 //     }
 // }
 // $request = $_POST['PARAMS'];
-// var_dump(json_decode(@file_get_contents( 'php://input'),true));
-// $request = $_POST;
+var_dump(json_decode(@file_get_contents( 'php://input'),true));
 
-$request = json_decode(@file_get_contents( 'php://input'));
-// var_dump($request);
-// die;
+$request = $_POST('PARA');
+var_dump($request);
+die;
+$request = @file_get_contents( 'php://input');
 $operate = "insert into test (name, message) values ('syf', '$request')";
 $result = mysqli_query($conn,$operate);
 if(!$result){
