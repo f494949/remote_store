@@ -76,8 +76,8 @@
                 return s+"天前";
             }else {
                 //超过30天ddd
-                let date = new Date(parseInt(date))
-                return date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate()
+                let date = new Date(parseInt(date));
+                return date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate();
             }
         }
 

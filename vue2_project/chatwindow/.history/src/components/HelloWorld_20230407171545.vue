@@ -77,7 +77,7 @@
             }else {
                 //超过30天ddd
                 let date = new Date(parseInt(date))
-                return date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate()
+                return date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate();
             }
         }
 

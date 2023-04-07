@@ -68,16 +68,16 @@
                 return  s + "分钟前"
             }else if ((time < 60 * 60 * 24) && (time >= 60 * 60)){
                 //超过1小时少于24小时
-                s = Math.floor(time / 60 / 60)
+                s = Math.floor(time / 60 / 60);
                 return  s + "小时前";
             }else if ((time < 60 * 60 * 24 * 30) && (time >= 60 * 60 * 24)){
                 //超过1天少于30天内
-                s = Math.floor(time / 60 / 60 / 24)
+                s = Math.floor(time / 60 / 60 / 24);
                 return s+"天前";
             }else {
                 //超过30天ddd
-                let date = new Date(parseInt(date))
-                return date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate()
+                let date = new Date(parseInt(date));
+                return date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate();
             }
         }
 
