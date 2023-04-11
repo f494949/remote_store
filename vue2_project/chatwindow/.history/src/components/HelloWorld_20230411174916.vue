@@ -18,7 +18,7 @@
               autosize
               resize="none"
               @keyup.enter.native="send">
-              <template #suffix>
+              <template #prefix>
                 <el-upload
                   class="upload-demo"
                   ref="upload"

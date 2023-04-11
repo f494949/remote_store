@@ -9,7 +9,7 @@
         </el-col>
 
         <el-col :span="24" class="padding-15">
-          <el-col :span="18">
+          <el-col :span="15">
             <el-input
               ref="input"
               v-model="textarea"
@@ -17,14 +17,15 @@
               placeholder="请输入内容"
               autosize
               resize="none"
+              maxlength="100"
+              show-word-limit
               @keyup.enter.native="send">
-              <template #suffix>
+              <template #prefix>
                 <el-upload
                   class="upload-demo"
                   ref="upload"
                   action="https://jsonplaceholder.typicode.com/posts/"
                   accept=".png, .jpg"
-                  list-type="picture"
                   :on-preview="handlePreview"
                   :on-remove="handleRemove"
                   :file-list="fileList"
@@ -124,9 +125,5 @@
 
   .text-right {
     text-align: right;
-  }
-
-  .upload-demo {
-    font-size: 25px;
   }
 </style>

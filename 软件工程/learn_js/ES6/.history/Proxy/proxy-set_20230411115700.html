@@ -10,7 +10,7 @@
     <script>
         let vaildator = {
             set: (obj, prop, value) => {
-                if (prop === 'age') {
+                if (prop === age) {
                     if (!Number.isInteger(value)) {
                         throw new TypeError('age is not integer')
                     }
@@ -22,7 +22,7 @@
             }
         }
 
-        let people = new Proxy({}, vaildator)        
+        let people = new Proxy({age: 10}, vaildator)        
         people.age = 100
         people.age
         console.log(people.age)

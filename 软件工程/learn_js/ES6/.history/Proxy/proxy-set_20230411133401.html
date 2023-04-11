@@ -22,7 +22,7 @@
             }
         }
 
-        let people = new Proxy({}, vaildator)        
+        let people = new Proxy({age}, vaildator)        
         people.age = 100
         people.age
         console.log(people.age)

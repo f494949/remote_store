@@ -18,13 +18,12 @@
               autosize
               resize="none"
               @keyup.enter.native="send">
-              <template #suffix>
+              <template #prefix>
                 <el-upload
                   class="upload-demo"
                   ref="upload"
                   action="https://jsonplaceholder.typicode.com/posts/"
                   accept=".png, .jpg"
-                  list-type="picture"
                   :on-preview="handlePreview"
                   :on-remove="handleRemove"
                   :file-list="fileList"
@@ -124,9 +123,5 @@
 
   .text-right {
     text-align: right;
-  }
-
-  .upload-demo {
-    font-size: 25px;
   }
 </style>

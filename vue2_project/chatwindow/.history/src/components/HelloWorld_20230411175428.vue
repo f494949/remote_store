@@ -13,7 +13,7 @@
             <el-input
               ref="input"
               v-model="textarea"
-              type="text"
+              type="textarea"
               placeholder="请输入内容"
               autosize
               resize="none"

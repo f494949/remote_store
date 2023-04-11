@@ -9,31 +9,21 @@
         </el-col>
 
         <el-col :span="24" class="padding-15">
-          <el-col :span="18">
-            <el-input
-              ref="input"
-              v-model="textarea"
-              type="text"
-              placeholder="请输入内容"
-              autosize
-              resize="none"
-              @keyup.enter.native="send">
-              <template #suffix>
-                <el-upload
-                  class="upload-demo"
-                  ref="upload"
-                  action="https://jsonplaceholder.typicode.com/posts/"
-                  accept=".png, .jpg"
-                  list-type="picture"
-                  :on-preview="handlePreview"
-                  :on-remove="handleRemove"
-                  :file-list="fileList"
-                  :auto-upload="false">
-                  <el-tooltip class="item" effect="dark" content="发送图片" placement="bottom">
-                    <i class="el-icon-picture-outline"></i>
-                  </el-tooltip>
-                </el-upload>
-              </template>
+          <el-col :span="15">
+            <el-input ref="input" v-model="textarea" type="text" autosize resize="none" maxlength="100" show-word-limit @keyup.enter.native="send">
+              <el-upload
+                class="upload-demo"
+                ref="upload"
+                action="https://jsonplaceholder.typicode.com/posts/"
+                accept=".png, .jpg"
+                :on-preview="handlePreview"
+                :on-remove="handleRemove"
+                :file-list="fileList"
+                :auto-upload="false">
+                <el-tooltip class="item" effect="dark" content="发送图片" placement="bottom">
+                  <i class="el-icon-picture-outline"></i>
+                </el-tooltip>
+              </el-upload>
             </el-input>
           </el-col>
 
@@ -124,9 +114,5 @@
 
   .text-right {
     text-align: right;
-  }
-
-  .upload-demo {
-    font-size: 25px;
   }
 </style>

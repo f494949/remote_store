@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const target = Object.defineProperties({}, { // defineProperties
+            foo: {
+                value: 123,      
+                writable: false,
+                configurable: false
+            }
+        })
+
+        const handler = {
+            get (target, propKey) {
+                return 'abc'
+            }
+        }
+
+        const p = new Proxy(target, handler)
+        p.foo
+    </script>
+</body>
+</html>
