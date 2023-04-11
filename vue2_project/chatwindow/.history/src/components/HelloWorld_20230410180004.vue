@@ -32,7 +32,7 @@
             :auto-upload="false"
             :span="5">
             <el-tooltip class="item" effect="dark" content="发送图片" placement="bottom">
-              <i class="el-icon-picture-outline" size="10"></i>
+              <i class="el-icon-picture-outline" size></i>
             </el-tooltip>
           </el-upload>
 

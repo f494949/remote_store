@@ -1,0 +1,1 @@
+let a = require('./circular_dependency_a')

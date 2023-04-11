@@ -22,21 +22,13 @@
               @keyup.enter.native="send" />
           </el-col>
 
-          <el-upload
-            class="upload-demo"
-            ref="upload"
-            action="https://jsonplaceholder.typicode.com/posts/"
-            :on-preview="handlePreview"
-            :on-remove="handleRemove"
-            :file-list="fileList"
-            :auto-upload="false"
-            :span="5">
+          <el-col :span="2" style="padding: 5px;">
             <el-tooltip class="item" effect="dark" content="发送图片" placement="bottom">
-              <i class="el-icon-picture-outline" size="10"></i>
+              <i class="el-icon-picture-outline"></i>
             </el-tooltip>
-          </el-upload>
+          </el-col>
 
-          <el-col :span="5" offset="1">
+          <el-col :span="5" :offset="1">
             <el-button type="primary" @click="send">发送</el-button>
           </el-col>
         </el-col>
@@ -58,6 +50,7 @@
       }
     },
     methods: {
+
       send() {
         if (this.textarea !== '') {
           this.groupChat.push({ message: this.textarea })
@@ -66,34 +59,34 @@
         }
       },
 
-      dateStr(date) {
-        //获取js 时间戳
-        let time = new Date().getTime()
-        //去掉 js 时间戳后三位，与php 时间戳保持一致
-        time = parseInt((time - date) / 1000)
-        //存储转换值
-        let s
-        if (time < 60 * 10) {
-          //十分钟内
-          return '刚刚'
-        } else if (time < 60 * 60 && time >= 60 * 10) {
-          //超过十分钟少于1小时
-          s = Math.floor(time / 60)
-          return s + '分钟前'
-        } else if (time < 60 * 60 * 24 && time >= 60 * 60) {
-          //超过1小时少于24小时
-          s = Math.floor(time / 60 / 60)
-          return s + '小时前'
-        } else if (time < 60 * 60 * 24 * 30 && time >= 60 * 60 * 24) {
-          //超过1天少于30天内
-          s = Math.floor(time / 60 / 60 / 24)
-          return s + '天前'
-        } else {
-          //超过30天ddd
-          let date = new Date(parseInt(date))
-          return date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
+      dateStr (date) {
+            //获取js 时间戳
+            let time = new Date().getTime()
+            //去掉 js 时间戳后三位，与php 时间戳保持一致
+            time = parseInt((time - date) / 1000)
+            //存储转换值
+            let s
+            if (time < 60 * 10) {//十分钟内
+                return '刚刚'
+            }else if ((time < 60 * 60) && (time >= 60 * 10)){
+                //超过十分钟少于1小时
+                s = Math.floor(time / 60)
+                return  s + "分钟前"
+            }else if ((time < 60 * 60 * 24) && (time >= 60 * 60)){
+                //超过1小时少于24小时
+                s = Math.floor(time / 60 / 60)
+                return  s + "小时前";
+            }else if ((time < 60 * 60 * 24 * 30) && (time >= 60 * 60 * 24)){
+                //超过1天少于30天内
+                s = Math.floor(time / 60 / 60 / 24)
+                return s+"天前";
+            }else {
+                //超过30天ddd
+                let date = new Date(parseInt(date))
+                return date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate()
+            }
         }
-      }
+
     }
   }
 </script>

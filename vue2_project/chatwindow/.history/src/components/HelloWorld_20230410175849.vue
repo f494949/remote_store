@@ -30,9 +30,9 @@
             :on-remove="handleRemove"
             :file-list="fileList"
             :auto-upload="false"
-            :span="5">
+            :s>
             <el-tooltip class="item" effect="dark" content="发送图片" placement="bottom">
-              <i class="el-icon-picture-outline" size="10"></i>
+              <i class="el-icon-picture-outline"></i>
             </el-tooltip>
           </el-upload>
 
