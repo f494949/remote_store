@@ -4,6 +4,6 @@
     }
     sayHi('123')
     let a:Number = 30
-    console.log(a)
+    console.log(a);
     
 })()
