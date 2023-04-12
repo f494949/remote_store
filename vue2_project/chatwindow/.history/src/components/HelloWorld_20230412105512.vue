@@ -17,6 +17,7 @@
               placeholder="请输入内容"
               autosize
               resize="none"
+              @input="changeWidth"
               @keyup.enter.native="send">
               <template #suffix>
                 <el-upload
@@ -35,7 +36,6 @@
                   </el-tooltip>
                 </el-upload>
               </template>
-              <el-col v-if="fileList.length >= 1"></el-col>
             </el-input>
           </el-col>
 
@@ -107,6 +107,10 @@
           let date = new Date(parseInt(date))
           return date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate()
         }
+      },
+
+      changeWidth(e) {
+        this.width1 = this.value.length * 15
       }
     }
   }

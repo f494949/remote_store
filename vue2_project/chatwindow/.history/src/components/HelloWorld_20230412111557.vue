@@ -35,7 +35,6 @@
                   </el-tooltip>
                 </el-upload>
               </template>
-              <el-col v-if="fileList.length >= 1"></el-col>
             </el-input>
           </el-col>
 

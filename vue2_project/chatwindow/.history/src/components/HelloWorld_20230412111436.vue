@@ -4,6 +4,7 @@
       <el-col :span="24">
         <el-col id="chatRecord" :span="24" class="content padding-15">
           <el-col v-for="(item, index) in groupChat" :key="index" :span="24">
+            <el-col v-if="fileList.le"></el-col>
             <p>{{ item.message }}</p>
           </el-col>
         </el-col>
@@ -35,7 +36,6 @@
                   </el-tooltip>
                 </el-upload>
               </template>
-              <el-col v-if="fileList.length >= 1"></el-col>
             </el-input>
           </el-col>
 

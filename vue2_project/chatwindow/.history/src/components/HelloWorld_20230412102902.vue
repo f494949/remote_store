@@ -28,14 +28,13 @@
                   :on-preview="handlePreview"
                   :on-remove="handleRemove"
                   :file-list="fileList"
-                  :show-file-list="false"
+                  :show-file-list="fa"
                   :auto-upload="false">
                   <el-tooltip class="item" effect="dark" content="发送图片" placement="bottom">
                     <i class="el-icon-picture-outline"></i>
                   </el-tooltip>
                 </el-upload>
               </template>
-              <el-col v-if="fileList.length >= 1"></el-col>
             </el-input>
           </el-col>
 

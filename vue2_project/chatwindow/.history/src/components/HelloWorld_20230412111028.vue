@@ -17,6 +17,7 @@
               placeholder="请输入内容"
               autosize
               resize="none"
+              
               @keyup.enter.native="send">
               <template #suffix>
                 <el-upload
@@ -35,7 +36,6 @@
                   </el-tooltip>
                 </el-upload>
               </template>
-              <el-col v-if="fileList.length >= 1"></el-col>
             </el-input>
           </el-col>
 

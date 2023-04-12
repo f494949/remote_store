@@ -15,7 +15,7 @@
               v-model="textarea"
               type="text"
               placeholder="请输入内容"
-              autosize
+              :autosize
               resize="none"
               @keyup.enter.native="send">
               <template #suffix>

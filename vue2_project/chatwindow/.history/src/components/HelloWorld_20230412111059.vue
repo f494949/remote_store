@@ -22,7 +22,7 @@
                 <el-upload
                   class="upload-demo"
                   ref="upload"
-                  action="https://jsonplaceholder.typicode.com/posts/"
+                  <!-- action="https://jsonplaceholder.typicode.com/posts/" -->
                   accept=".png, .jpg"
                   list-type="picture"
                   :on-preview="handlePreview"
@@ -35,7 +35,6 @@
                   </el-tooltip>
                 </el-upload>
               </template>
-              <el-col v-if="fileList.length >= 1"></el-col>
             </el-input>
           </el-col>
 
