@@ -1,0 +1,1 @@
+function getLength(x:string|number){}

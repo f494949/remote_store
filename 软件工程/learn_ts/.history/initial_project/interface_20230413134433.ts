@@ -1,0 +1,3 @@
+class P {}
+
+class An{}

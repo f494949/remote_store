@@ -1,0 +1,19 @@
+class Name {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    // 设置存取器
+    // 读取器：用来读取数据
+    get fullName() {
+        return this.firstName + '-' + this.lastName;
+    }
+    // 设置器
+    set fullName(value) {
+        console.log(value);
+        let name = value.split('-');
+        this.firstName = name[0];
+        this.lastName = name[1];
+    }
+}
+const n = new Name('张', '三');
