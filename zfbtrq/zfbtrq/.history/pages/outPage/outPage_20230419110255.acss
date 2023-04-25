@@ -1,0 +1,33 @@
+page {
+  background: url('../assets/背景图.png') center center no-repeat;
+  width:100%;			
+  min-height: 100vh;			
+  background-size: 100% 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+
+.logo {
+  width: 12rpx;
+  height: auto;
+  margin-top: 1rpx;
+  margin-left: 1rpx;
+}
+
+/* .covermask>view{
+  margin: auto;
+  width: 75%;
+  position: relative;
+}
+.covermask>view>view{
+  content:" ";
+  display:block;
+  width:55rpx;
+  height: 55rpx;
+  background: url("/images/close.png") no-repeat center / cover;
+  position: absolute;
+  bottom: -80rpx;
+  left: 50%;
+  transform: translateX(-50%);
+} */

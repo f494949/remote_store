@@ -1,0 +1,11 @@
+{
+  "defaultTitle": "圈存点导航",
+  "allowBounceVertical":"NO",
+  "pullRefresh":false,
+  "usingComponents": {
+    "map-block": "/pages/components/map-block/map-block",
+    "popup": "mini-ali-ui/es/popup/index",
+    "modal": "mini-ali-ui/es/modal/index"
+
+  }
+}

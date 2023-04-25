@@ -1,0 +1,84 @@
+<view>
+  <image class="logo" src="/images/outpage/logo.png" mode="widthFix"/>
+</view>
+<view class="box">
+  <view class="page-section">
+    <view class="form-row">
+      <view class="form-row-label">您的姓名 </view>
+      <view class="form-row-content">
+        <view>
+          <input class="input" placeholder="请输入您的姓名" />
+        </view>
+      </view>
+    </view>
+    
+    <view class="form-row">
+      <view class="form-row-label">您的电话</view>
+      <view class="form-row-content">
+        <view>
+          <input class="input" placeholder="请输入您的电话" />
+        </view>
+      </view>
+    </view>
+
+    <view class="form-row">
+      <view class="form-row-label">您的地址</view>
+      <view class="form-row-content">
+        <view>
+          <input class="input" placeholder="请输入您的地址" />
+        </view>
+      </view>
+    </view>
+    
+    <view class="form-row">
+      <view class="form-row-label">预约上门清洗时间</view>
+      <view class="form-row-content">
+        <!-- <view>
+          <picker mode="date" value="{{currentDate}}" start="{{startDate}}" end="{{endDate}}" onChange="datePicker">
+						<view class="record-date">
+              <text class="pick">{{currentDate}}</text>
+            </view>
+					</picker>
+        </view>
+
+        <view class="fix">
+          <view class="pickHour">
+            <picker mode="date" value="{{currentDate}}" start="{{startDate}}" end="{{endDate}}" onChange="datePicker">
+              <view class="record-date">
+                <text>{{currentDate}}</text>
+              </view>
+            </picker>
+          </view>
+          <view class="pickHour">
+            <picker mode="date" value="{{currentDate}}" start="{{startDate}}" end="{{endDate}}" onChange="datePicker">
+              <view class="record-date">
+                <text>{{currentDate}}</text>
+              </view>
+            </picker>
+          </view>
+        </view> -->
+
+        <view onTap="apiDatePicker">
+          <view class="pickHour">API选择时间</view>
+          <view class="pi">{{apiDate ? apiDate : '选择日期'}}</view>
+        </view>
+
+      </view>
+    </view>
+    
+    <view class="form-row">
+      <view class="form-row-label">您所预约的套餐为</view>
+      <view class="form-row-content">
+        <view>
+          <picker onChange="bindObjPickerChange" value="{{arrIndex}}" range="{{objectArray}}" range-key="name">
+            <view class="pick">
+              {{objectArray[arrIndex].name}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    
+    <button>提交</button>
+  </view>
+</view>

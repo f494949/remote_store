@@ -1,0 +1,13 @@
+<view class="accountitem">
+  <view a:key="*this" a:for="{{accountList}}" data-index="{{index}}" onTap="{{isshow?'':'pickOne'}}">
+    <image class="iconpimg" mode="widthFix" src="{{item.choose?'/images/iconpc.png':'/images/iconp.png'}}"/>
+    <view class="infobox">
+      <view>{{item.username}}</view>
+      <view>{{item.userno}}</view>
+      <view>{{item.address}}</view>
+    </view>
+    <image class="rigthtop freebind" mode="widthFix" src="/images/mine/del.png"/ a:if="{{isshow}}" data-index="{{index}}" catchTap="freeBind">
+    <view class="rigthtop" mode="widthFix" a:if="{{!isshow}}">{{item.attribute}}</view>
+
+  </view>  
+</view>

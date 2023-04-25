@@ -1,0 +1,61 @@
+<view>
+  <image class="logo" src="https://wp.babel-group.cn/icon.png" mode="widthFix"/>
+</view>
+<view class="box">
+  <view class="page-section">
+    <view class="form-row">
+      <view class="form-row-label">您的姓名 </view>
+      <view class="form-row-content">
+        <view>
+          <input class="input" name="name" data-name="name" onInput="iptFn" placeholder="请输入您的姓名" />
+        </view>
+      </view>
+    </view>
+    
+    <view class="form-row">
+      <view class="form-row-label">您的电话</view>
+      <view class="form-row-content">
+        <view>
+          <input class="input" name="phone" data-name="phone" onInput="iptFn" placeholder="请输入您的电话" />
+        </view>
+      </view>
+    </view>
+
+    <view class="form-row">
+      <view class="form-row-label">您的地址</view>
+      <view class="form-row-content">
+        <view>
+          <input class="input" name="address" data-name="address" onInput="iptFn" placeholder="请输入您的地址" />
+        </view>
+      </view>
+    </view>
+    
+    <view class="form-row" name="date" data-name="date">
+      <view class="form-row-label">预约上门安装时间</view>
+      <view class="form-row-content">
+        <view onTap="apiDatePicker">
+          <view class="title" a:if="{{ date == null }}">请选择日期</view>
+          <view class="pick">{{date}}</view>
+        </view>
+
+      </view>
+    </view>
+    
+    <view class="form-row" name="objectArray">
+      <view class="form-row-label">您所预约的产品是</view>
+      <view class="form-row-content">
+        <view>
+          <picker onChange="bindObjPickerChange" value="{{arrIndex}}" range="{{objectArray}}" range-key="name">
+            <view class="pick" a:if="{{ arrIndex !== 0 }}">{{objectArray[arrIndex].name}}</view>
+            <view class=" title">
+              请选择预约产品
+              
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    
+    <button formType="submit" onTap="onSubmit" disabled="{{disabled}}" type="primary">提交</button>
+  </view>
+</view>

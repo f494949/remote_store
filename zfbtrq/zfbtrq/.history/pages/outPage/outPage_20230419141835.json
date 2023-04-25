@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Input",
+  "usingComponents": {
+    "popup": "mini-ali-ui/es/popup/index"
+  }
+}

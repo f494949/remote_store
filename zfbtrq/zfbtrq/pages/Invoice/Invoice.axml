@@ -1,0 +1,67 @@
+<!-- 个人信息 -->
+<view class="userinfo">
+    <view class="nametype">
+        <text>{{userList[userIndex].username}}</text>
+        <text a:if="{{userList[userIndex].usertype}}">({{userList[userIndex].usertype}})</text></view>
+    <view class="usercode">{{userList[userIndex].usercode}}</view>
+    <view class="address">{{userList[userIndex].address}}</view>
+    <view class="changeCode" a:if="{{userList.length > 1}}" onTap="onBotBtnTap">
+        切换账户
+        <text class="rightArrow"></text>
+    </view>
+</view>
+<!-- 选框 -->
+<view class="choosetab">
+    <view style="color:{{!isopen?'#00B9E9':'#000'}}" onTap="switchtype" data-type="no">未开票</view>
+    <view style="color:{{isopen?'#00B9E9':'#000'}}" onTap="switchtype" data-type="aready">已开票</view>
+</view>
+<!-- 发票列表 -->
+<view a:if="{{!isopen}}">
+    <!-- ic -->
+    <view a:key="*this" a:for="{{invoiceData.invoicing}}" class="invoiceitem" a:if="{{invoiceData.type == '1'}}">
+        <image mode="widthFix" src="/images/fire.png" />
+        <view style="width:60%">
+            <view class="way">{{item.busitypename}}</view>
+            <view>气量:{{item.amount}}</view>
+            <view>金额:{{item.paysum}}</view>
+            <view>时间:{{item.paytime}}</view>
+        </view>
+        <image mode="widthFix" src="/images/Invoice/open.png" data-index="{{index}}" onTap="applyInvoiceOpen" />
+    </view>
+    <!-- 待开机械表 -->
+    <view a:key="*this" a:for="{{invoiceData.invoicing}}" class="invoiceitem" a:if="{{invoiceData.type == '2'}}">
+        <image mode="widthFix" src="/images/fire.png" />
+        <view style="width:60%">
+            <view class="way">{{item.busitypename}}</view>
+            <view>气量:{{item.billamount}}</view>
+            <view>金额:{{item.chrgsum}}</view>
+            <view>账期:{{item.yrmonth}}</view>
+        </view>
+        <image mode="widthFix" src="/images/Invoice/open.png" data-index="{{index}}" onTap="creatInvoice" />
+    </view>
+</view>
+<!-- 已开表 -->
+<view a:if="{{isopen}}">
+    <view a:key="*this" a:for="{{invoiceData.invoiced}}" class="invoiceitem">
+        <image mode="widthFix" src="/images/fire.png" />
+        <view style="width:60%">
+            <view>发票号码:{{item.ticket_code}}</view>
+            <view>金额:{{item.ticket_total_amount_has_tax}}</view>
+            <view>开票时间:{{item.ticket_date}}</view>
+        </view>
+        <image mode="widthFix" src="/images/Invoice/check.png" data-id="{{item.b_unique_id}}" onTap="openIvoice" />
+    </view>
+</view>
+<!-- 弹出 -->
+<popup show="{{showBot}}" position="bottom" onClose="onPopupClose">
+    <view class="clistbox">
+        <view a:key="*this" a:for="{{userList}}" data-value="{{item.value}}" data-index="{{index}}" onTap="chooseone" class="{{index==userIndex?'blue':''}}">
+            <image class="headicon" mode="scaleToFill" src="{{index==userIndex?'/images/Invoice/headb.png':'/images/Invoice/head.png'}}"></image>
+            <view class="namebox" style="border-right:0.02rpx solid {{index== userIndex?'#28B8ED':'#000'}} ">{{item.username}}</view>
+            <view>{{item.userno}}</view>
+        </view>
+    </view>
+</popup>
+<view a:if="{{!isFlag}}" class="movebox">
+    <movetem onResult="verifyResult"></movetem>
+</view>

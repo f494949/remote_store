@@ -1,0 +1,142 @@
+page{
+  width:100%;
+  height: 100%;
+  background-image: url("/images/bk.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  overflow-y:scroll;
+  /* display: inline-flex; */
+}
+.phonesearchbox{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 290rpx;
+}
+.phonesearchbox>image{
+  margin-bottom: 40rpx;
+  width: 420rpx;
+}
+.phonesearchbox>view{
+  line-height: 50rpx!important;
+}
+.tipstop{
+  line-height: 108rpx;
+  text-align: center;
+  color: #898989;
+  font-size: 32rpx;
+}
+.accountList{
+  width: 660rpx;
+  margin: auto;
+}
+.fnbtnbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 75rpx;
+  box-sizing: border-box;
+  position: fixed;
+  width:100%;
+  bottom: 0;
+  left:0;
+}
+.fnbtnbox>image:nth-of-type(1){
+  display: block;
+  width: 260rpx;
+}
+.fnbtnbox>image:nth-of-type(2){
+  display: block;
+  width: 288rpx;
+}
+.selfbind{
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  overflow-y:hidden;
+}
+.banner{
+  display: block;
+  width:100%;
+}
+.formbox{
+  flex:1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 0 45rpx 45rpx 45rpx;
+  box-sizing: border-box;
+  line-height: 85rpx;
+  min-height:85rpx;
+}
+.formbox>view{
+  display: flex;
+  align-items: center;
+}
+.formbox>view>text{
+  font-size: 32rpx;
+  font-weight: 500;
+}
+.formbox>view>text:nth-of-type(1){
+  width:145rpx;
+}
+.formbox>view>view{
+  width:75%;
+  line-height:40rpx;
+  color:#28B8ED;
+  font-size:32rpx;
+}
+.line{
+  display: block;
+  width: 2rpx;
+  height: 34rpx;
+  background: #DCDDDD;
+  margin: 0 15rpx;
+}
+.formbox input{
+  padding:0;
+  margin: 0;
+  text-align: 32rpx;
+}
+.rule{
+  display: block;
+  width: 100%;
+  margin-top: 30rpx;
+}
+.cfmbtn{
+  width: 474rpx;
+  position: fixed;
+  bottom: 5rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cfmbtn>image{
+  width: 100%;
+}
+
+.am-verify-code-item{
+  padding-left: 0;
+  border:unset;
+}
+.am-verify-code-action{
+  border:unset;
+  color:rgb(40,184,237)
+}
+.am-verify-code-action.active{
+  color:rgb(40,184,237)
+}
+.am-verify-code-content{
+  padding-left: 13rpx!important;
+}
+.am-verify-code-line-bottom::after{
+  height:0;
+}
+.am-verify-code-item .line{
+  position: absolute;
+}
+.am-verify-code-label{
+  border-right:0.01rem solid rgb(220, 221, 221);
+  min-width:1.45rem !important;
+}

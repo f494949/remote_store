@@ -1,0 +1,25 @@
+<view class="mainbox">
+  <!--pages/detailPage/detailPage.wxml-->
+  <view>
+    <view class="typetag">{{dataObj.cate_name}}</view>
+    <view class="title">{{dataObj.title}}</view>
+    <view class="databox">
+      <view>
+        <!-- <image src="../../images/time.png" mode="widthFix" class="clock"></image> -->
+        <text>{{dataObj.create_time}}</text>
+      </view>
+      <view>
+        <!-- <image src="../../images/eye.png" mode="widthFix" class="eye"></image> -->
+        <text>{{dataObj.read_count}}</text>
+      </view>
+    </view>
+  </view>
+  <view a:key="*this" a:for="{{dataObj.content}}">
+    <video a:if="{{item.type=='video'}}" src="{{item.url}}"></video>
+    <text space="nbsp" decode="{{true}}" a:if="{{item.type=='text'}}">
+      {{item.content}}
+    </text>
+    <image src="{{item.url}}" onError="imageError" mode="widthFix" a:if="{{item.type=='img'}}"></image>
+    <view class="pdftext" mode="widthFix" a:if="{{item.type=='file'}}" data-pdf_url="{{item.url}}" onTap="openPdf">{{item.file_name}}(点击打开)</view>
+  </view>
+</view>

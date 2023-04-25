@@ -1,0 +1,7 @@
+{
+    "defaultTitle": "领取发票",
+    "usingComponents": {
+        "popup": "mini-ali-ui/es/popup/index",
+        "movetem": "/pages/components/moveTem/moveTem"
+    }
+}

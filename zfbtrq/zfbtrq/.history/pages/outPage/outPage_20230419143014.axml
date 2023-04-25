@@ -1,0 +1,51 @@
+<view class="page">
+  <view>
+    <image class="logo" src="/images/outpage/logo.png" mode="widthFix"/>
+  </view>
+  <view class="box">
+    <view class="page-section">
+      <view class="form-row">
+        <view class="form-row-label">您的姓名 </view>
+        <view class="form-row-content">
+          <view>
+            <input class="input" placeholder="请输入您的姓名" />
+          </view>
+        </view>
+      </view>
+      
+      <view class="form-row">
+        <view class="form-row-label">您的电话</view>
+        <view class="form-row-content">
+          <view>
+            <input class="input" placeholder="请输入您的电话" />
+          </view>
+        </view>
+      </view>
+
+      <view class="form-row">
+        <view class="form-row-label">您的地址</view>
+        <view class="form-row-content">
+          <view>
+            <input class="input" placeholder="密码输入框" />
+          </view>
+        </view>
+      </view>
+      
+      <view class="form-row">
+        <view class="form-row-label">预约上门清洗时间</view>
+        <view class="form-row-content">
+          <input class="input" placeholder="数字输入框" />
+        </view>
+      </view>
+      <view class="form-line" />
+      <view class="form-row">
+        <view class="form-row-label">您所预约的套餐为</view>
+        <view class="form-row-content">
+          <input class="input" placeholder="带小数点的数字键盘" />
+        </view>
+      </view>
+      <view class="form-line" />
+      <button>提交</button>
+    </view>
+  </view>
+</view>

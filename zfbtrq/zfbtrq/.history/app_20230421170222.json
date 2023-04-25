@@ -1,0 +1,24 @@
+{
+    "pages": [
+        "pages/HomePage/HomePage",
+        "pages/InvoiceDetail/InvoiceDetail",
+        "pages/shopDetail/shopDetail",
+        "pages/Mhh/Mhh",
+        "pages/Into/Into",
+        "pages/Booking/Booking",
+        "pages/outPage/outPage",
+        "pages/infoList/infoList",
+        "pages/Invoice/Invoice",
+        "pages/noticeDetail/noticeDetail",
+        "pages/Mine/Mine",
+        "pages/Bind/Bind",
+        "pages/Map/Map",
+        "pages/index/index",
+        "pages/product/product",
+        // "pages/HomePage/pages/product/product"
+    ],
+    "window": {
+        "defaultTitle": "",
+        "allowsBounceVertical": "NO"
+    }
+}

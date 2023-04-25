@@ -1,0 +1,78 @@
+<form onSubmit="onSubmit" report-submit="{{true}}">
+  <view class="itembox">
+    <view class="imgtitle">联系方式</view>
+    <!-- 姓名 -->
+    <view class="formitem">
+      <view>
+        <text>联</text>
+        <text>系</text>
+        <text>人</text>
+      </view>
+      <view class="line">|</view>
+      <input placeholder="请输入安检联系人" name="name" data-name="name" value="{{formObj.name}}" onInput="iptFn"></input>
+    </view>
+    <!-- 联系方式 -->
+    <view class="formitem">
+      <view>
+        <text>联系方式</text>
+      </view>
+      <view class="line">|</view>
+      <input placeholder="请输入11位手机号码" name="tel" data-name="tel" value="{{formObj.tel}}" onInput="iptFn"  type="number"></input>
+    </view>
+    <!-- 所在区域 -->
+    <view class="formitem">
+      <view>
+        <text>所在区域</text>
+      </view>
+      <view class="line">|</view>
+      <picker onChange="bindObjPickerChange" value="{{areaList}}" range="{{areaList}}" range-key="area_name" style="display:block;width:75%">
+        <view>{{areaIndex!=null?areaList[areaIndex].area_name:'--请选择所在区域--'}}</view>
+      </picker>
+    </view>
+    <!-- 准确地址 -->
+    <view class="formitem">
+      <view>
+        <text>准确地址</text>
+      </view>
+      <view class="line">|</view>
+      <input placeholder="请输入正确的安检地址" name="address" data-name="address" value="{{formObj.address}}" onInput="iptFn"></input>
+    </view>
+  </view>
+  <view class="itembox"  a:if="{{formtype == 2}}">
+    <view class="imgtitle">请选择类型</view>
+    <!-- 类别 -->
+    <view class="formitem">
+      <view>
+        <text>选择类别</text>
+      </view>
+      <view class="line">|</view>
+      <picker onChange="bindObjPickerChange1" value="{{typeList}}" range="{{typeList}}" style="display:block;width:75%;position:relative">
+        <view>
+          {{typeIndex!=null?typeList[typeIndex]:'--请选择类别--'}}
+        </view>
+      </picker>
+      <view class="downArrow"></view>
+    </view>
+  </view>
+  <view class="itembox" >
+    <view class="imgtitle">描述</view>
+    <!-- 描述 -->
+    <view class="formitem">
+      <textarea placeholder="请填写描述" name="remark" data-name="remark" value="{{formObj.remark}}" onInput="iptFn" enableNative="{{false}}"  a:if="{{!mask}}"></textarea>
+    </view>
+  </view>
+  <view class="itembox"  a:if="{{formtype == 2}}">
+    <view class="imgtitle">上传现场图片 
+      <text class="smalltip"> *您可以上传现场照片，限9张</text></view>
+        <view a:if="{{imgList.length!=0}}" style="position:relative;margin-top:20rpx;"  a:key="*this" a:for="{{imgList}}">
+          <image mode="widthFix" src="{{item}}"/>
+          <image class='del' src='/images/del.png' data-index='{{index}}' onTap='delimg'></image>
+
+        </view>
+      <image  a:if="{{imgList.length!=9}}" mode="widthFix" src="/images/Booking/pto.png" onTap="chooseImage"  style="margin-top:20rpx;"/>
+
+  </view>
+  <button formType="submit" type="primary">
+    <image mode="widthFix" src="/images/Booking/subbtn.png" class="nextbtn"/>
+  </button>
+</form>

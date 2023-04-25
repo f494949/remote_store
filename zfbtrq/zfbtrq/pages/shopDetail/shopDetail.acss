@@ -1,0 +1,114 @@
+page {
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/bk.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  overflow-y: scroll;
+}
+.bannerswiper{
+  height: 500rpx!important;
+}
+.bannerImg{
+  display: block;
+  width: 100%;
+}
+.shopItem{
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 28rpx 44rpx;
+  display: flex;
+  /* margin-top: 35rpx; */
+}
+.shopItem text{
+  display: inline-block;
+  margin-right: 35rpx;
+}
+
+.shoppic{
+  width:125rpx;
+  height: 125rpx;
+  border-radius: 22rpx;
+  overflow: hidden;
+  margin-right: 22rpx;
+}
+.shopname{
+  font-size: 32rpx;
+  color: #000!important;
+  line-height: 50rpx;
+  font-weight: 900;
+}
+/* .shopItem>view{
+  width: 75%;
+} */
+.itemtop{
+  width: 100%;
+}
+.itemtop view{
+  color: #898989;
+  line-height: 42rpx;
+}
+.cardBox{
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 45rpx;
+  margin-top: 20rpx;
+  color:#1BB5EE;
+  box-sizing: border-box;
+}
+.cardItem{
+  background-color: #F7F8F8;
+  border-radius: 10rpx;
+  padding: 50rpx 25rpx 45rpx 25rpx;
+  display: flex;
+  margin-top: 40rpx;
+  background-image: url("/images/shopDetail/cardbk.png");
+  background-size: cover;
+  position: relative;
+}
+.cardItem>view:nth-of-type(1){
+  font-size:26rpx;
+  align-self: flex-start;
+  margin-right: 15rpx;
+}
+.cardItem>view:nth-of-type(2){
+  align-self: flex-start;
+  font-size:118rpx;
+  line-height: 80rpx;
+  font-weight: 900;
+  margin-right: 20rpx;
+}
+.cardItem>view:nth-of-type(3){
+  font-size:26rpx;
+  align-self: flex-end;
+}
+.statusIcon{
+  display: block;
+  width: 113rpx;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  right: 25rpx;
+}
+.big{
+  width:144rpx!important;
+}
+.rulebox{
+    background: #fff;
+    padding: 0.45rem 0.1rem;
+    box-sizing: border-box;
+}
+.rulebox>view{
+  margin-bottom: 10rpx;
+}
+.rulebox>view>view{
+    color: #939393!important;
+    font-size: 24rpx!important;
+    line-height: 32rpx;
+}
+.rulebox>view>view:nth-of-type(1){
+    color: #000!important;
+    font-weight: 900;
+    font-size: 26rpx!important;
+    line-height: 40rpx;
+}

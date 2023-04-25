@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mini-ali-ui": "^1.1.7",
+    "regenerator-runtime": "^0.13.7"
+  }
+}

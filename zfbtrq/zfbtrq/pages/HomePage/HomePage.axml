@@ -1,0 +1,64 @@
+<!-- 提醒 -->
+<view class="noticeBox">
+    <view class="noticeT">
+        <image mode="widthFix" src="/images/homepage/noticeicon.png"></image>
+        <text>通知：</text>
+    </view>
+    <notice className="loopNotice" marqueeProps="{{marqueeProps}}" enableMarquee="{{true}}" show="{{true}}" onClick="noticeDetail" 
+        action="查看更多" showIcon="{{false}}">{{tipsN}}</notice>
+</view>
+<!-- 轮播图 -->
+<swiper indicator-dots="{{true}}" class="bannerBox" autoplay="{{true}}" style="min-height:405rpx;height:405rpx!important">
+    <block a:key="*this" a:for="{{bannerList}}">
+        <swiper-item>
+            <image src="{{item.url}}" mode="widthFix" data-index="{{index}}" onTap="outpage" id="bannerCollet" data-btype="{{item.redirect_type}}" 
+                data-bpath="{{item.redirect_url}}"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<!--<button size="default" onTap="addCard" type="primary">Button</button>-->
+<!-- 底部菜单组 -->
+<view class="btMenu">
+    <image mode="widthFix" src="/images/homepage/menutitle.png"></image>
+    <view class="menuitembox">
+        <image mode="widthFix" src="/images/homepage/menubk.png"></image>
+        <view class="menutap">
+            <view a:key="*this" a:for="{{menuList}}" class="fnbtn onlinebtn" onTap="toInner" data-index="{{index}}" data-fnid="{{item.id}}" 
+                a:if="{{index<4}}"></view>
+        </view>
+    </view>
+    <image mode="widthFix" src="/images/homepage/menutitle1.png" style="margin-top:30rpx"></image>
+    <view class="menuitembox1">
+        <image mode="widthFix" src="/images/homepage/menubk1.png"></image>
+        <view class="menutap">
+            <view a:key="*this" a:for="{{menuList}}" class="fnbtn" onTap="toInner" data-index="{{index}}" data-fnid="{{item.id}}" 
+                a:if="{{index>=4}}"></view>
+        </view>
+    </view>
+    <view class="follow-box">
+        <life-follow sceneId="2a4217f2ee964772901e1c719420016b" />
+    </view>
+    
+</view>
+
+<!-- 底部导航 -->
+<view class="tarbarbox">
+    <image mode="widthFix" src="/images/homepage/tarbar.jpg"></image>
+    <view class="tarbartap">
+        <view></view>
+        <view onTap="towhere" data-url="/pages/Mhh/Mhh"></view>
+        <view onTap="towhere" data-url="/pages/Mine/Mine"></view>
+    </view>
+</view>
+
+<!-- 弹出 -->
+<popup show="{{showBot}}" position="bottom" onClose="onPopupClose" style="position:relative;z-index:9999">
+    <view class="clistbox">
+        <view a:key="*this" a:for="{{userList}}" data-value="{{item.value}}" data-index="{{index}}" onTap="chooseone">
+            <image class="headicon" mode="scaleToFill" src="/images/Invoice/head.png"></image>
+            <view class="namebox" style="border-right:0.02rpx solid #000'}} ">{{item.username}}</view>
+            <view>{{item.userno}}</view>
+            <!--<view a:if="{{item.type}}" class="typebox">{{item.type}}</view> -->
+        </view>
+    </view>
+</popup>

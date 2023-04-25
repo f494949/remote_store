@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "业务预约",
+  "usingComponents": {
+    "popup": "mini-ali-ui/es/popup/index"
+  }
+}

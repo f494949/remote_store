@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "明火荟商家",
+   "usingComponents":{
+   "guide": "mini-ali-ui/es/guide/index"
+  }
+}
