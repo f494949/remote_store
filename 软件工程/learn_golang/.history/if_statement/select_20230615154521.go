@@ -30,5 +30,5 @@ func main() {
 			fmt.Println("received one")
 		}
 	}
-	judge()
+	j
 }

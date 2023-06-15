@@ -31,4 +31,5 @@ func main() {
 		}
 	}
 	judge()
+	cl
 }
