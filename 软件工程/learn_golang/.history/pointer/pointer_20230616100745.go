@@ -1,0 +1,8 @@
+package main
+
+import "fmt"
+
+func main() {
+	var a * int = 10
+	fmt.Printf("a的值为%d", &a)
+}

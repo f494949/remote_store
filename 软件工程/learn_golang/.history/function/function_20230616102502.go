@@ -35,6 +35,6 @@ func main() {
 	}
 	fmt.Println(list2(7))
 
-	// 后续知识没有学习到，应该还有别的方法
+	// 
 
 }
