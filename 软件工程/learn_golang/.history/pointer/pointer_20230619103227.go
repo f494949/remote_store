@@ -39,7 +39,7 @@ func main() {
 	fmt.Printf("x的值为:%d\n", x)
 }
 
-// pointer_function_1
+//pointer_function_1
 func test(x *int) {
 	*x = *x + 1
 }

@@ -32,14 +32,14 @@ func main() {
 	fmt.Printf("pointer的值:%d\n", *pointer)
 	fmt.Printf("doublePointer的值:%d\n", **doublePointer)
 
-	// pointer_function_1
+	//pointer_function_1
 	x := 10
 	fmt.Printf("x的值为:%d\n", x)
 	test(&x) // 对原始变量的值进行修改
 	fmt.Printf("x的值为:%d\n", x)
 }
 
-// pointer_function_1
+//pointer_function_1
 func test(x *int) {
 	*x = *x + 1
 }
