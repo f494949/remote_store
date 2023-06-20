@@ -1,9 +1,0 @@
-{
-  "defaultTitle": "武汉天然气",
-  "allowBounceVertical":"NO",
-  "pullRefresh":false,
-  "usingComponents": {
-    "notice": "mini-ali-ui/es/notice/index",
-    "popup": "mini-ali-ui/es/popup/index"
-  }
-}

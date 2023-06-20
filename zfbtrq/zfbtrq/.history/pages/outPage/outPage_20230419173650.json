@@ -1,6 +1,0 @@
-{
-  "defaultTitle": "Date Picker",
-  "usingComponents": {
-    "popup": "mini-ali-ui/es/popup/index"
-  }
-}

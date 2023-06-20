@@ -1,8 +1,0 @@
-{
-  "titleBarColor":"#00B9E9",
-  "defaultTitle":"商家入驻",
-  "usingComponents": {
-    "popup": "mini-ali-ui/es/popup/index",
-    "guide": "mini-ali-ui/es/guide/index"
-  }
-}

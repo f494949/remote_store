@@ -1,9 +1,0 @@
-<view class="page">
-  <web-view src="{{link}}" a:if="{{bgtips!=1}}"></web-view>
-  <view class="covermask" a:if="{{bgtips==1}}">
-    <view>
-      <image mode="widthFix" src="/images/tips.png"/>
-      <view onTap="closetips"></view>
-    </view>
-  </view>
-</view>

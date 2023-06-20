@@ -1,9 +1,0 @@
-{
-  "defaultTitle": "绑定户号",
-  "allowBounceVertical":"NO",
-  "pullRefresh":false,
-  "usingComponents": {
-    "account-block": "/pages/components/account-block/account-block",
-    "verify-code": "mini-ali-ui/es/verify-code/index"
-  }
-}

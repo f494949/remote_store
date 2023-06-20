@@ -1,6 +1,0 @@
-{
-  "defaultTitle": "个人中心",
-  "usingComponents": {
-    "account-block": "/pages/components/account-block/account-block"
-    }
-}
