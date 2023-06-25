@@ -15,7 +15,7 @@ func (di *divideError) error() string {
 	return fmt.Sprintf(strFormat, di.dividee)
 }
 
-func divide(vardividee, vardivider int) (result int, errorMsg string) {
+func divide(vardividee, vardivider int) (int, errorMsg string) {
 	if vardivider == 0 {
 		data := divideError{
 			dividee: vardividee,

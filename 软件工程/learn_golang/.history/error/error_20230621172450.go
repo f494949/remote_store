@@ -16,23 +16,16 @@ func (di *divideError) error() string {
 }
 
 func divide(vardividee, vardivider int) (result int, errorMsg string) {
-	if vardivider == 0 {
+	if vardivider==0 {
 		data := divideError{
 			dividee: vardividee,
 			divider: vardivider,
 		}
 		errorMsg = data.error()
-		return
-	} else {
-		return vardividee / vardivider, ""
+		re
 	}
 }
 
 func main() {
-	if result, errorMsg := divide(100, 10); errorMsg == "" {
-		fmt.Printf("calculative's result is %d\n", result)
-	}
-	if _, errorMsg := divide(100, 0); errorMsg != "" {
-		fmt.Printf("error message is: %s\n", errorMsg)
-	}
+
 }

@@ -29,10 +29,7 @@ func divide(vardividee, vardivider int) (result int, errorMsg string) {
 }
 
 func main() {
-	if result, errorMsg := divide(100, 10); errorMsg == "" {
-		fmt.Printf("calculative's result is %d\n", result)
-	}
-	if _, errorMsg := divide(100, 0); errorMsg != "" {
-		fmt.Printf("error message is: %s\n", errorMsg)
+	if result, errorMsg := divide(100,10); errorMsg == "" {
+		fmt.Printf("calculative's result is %d", result)
 	}
 }
