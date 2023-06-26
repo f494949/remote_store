@@ -1,0 +1,49 @@
+import request from '@/utils/request'
+
+export function {{singular}}List(data) {
+  return request({
+    url: '/{{snake}}',
+    method: 'post',
+    data
+  })
+}
+
+export function {{singular}}Info(data) {
+  return request({
+    url: '/{{singular}}',
+    method: 'post',
+    data
+  })
+}
+
+export function {{singular}}Select(data) {
+  return request({
+    url: '/{{singular}}/select',
+    method: 'post',
+    data
+  })
+}
+
+export function {{singular}}Create(data) {
+  return request({
+    url: '/{{singular}}/create',
+    method: 'post',
+    data
+  })
+}
+
+export function {{singular}}Update(data) {
+  return request({
+    url: '/{{singular}}/update',
+    method: 'post',
+    data
+  })
+}
+
+export function {{singular}}Delete(data) {
+  return request({
+    url: '/{{singular}}/delete',
+    method: 'post',
+    data
+  })
+}

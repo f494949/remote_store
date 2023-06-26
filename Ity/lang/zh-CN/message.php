@@ -1,0 +1,190 @@
+<?php
+return [
+    'common' => [
+        'search' => [
+            'success' => '查询成功',
+            'fail' => '查询失败',
+        ],
+        'bind' => [
+            'success' => '绑定成功',
+            'fail' => '绑定失败',
+        ],
+        'create' => [
+            'success' => '添加成功',
+            'fail' => '添加失败',
+        ],
+        'update' => [
+            'success' => '更新成功',
+            'fail' => '更新失败',
+        ],
+        'delete' => [
+            'success' => '删除成功',
+            'fail' => '删除失败',
+            'fail_message' => '删除失败: :MESSAGE',
+        ],
+        'upload' => [
+            'success' => '上传成功',
+            'fail' => '上传失败',
+            'need_image' => '请上传图片',
+            'image_type_error' => '图片类型错误',
+            'need_file' => '请上传文件',
+            'file_type_error' => '文件类型错误',
+            'file_cannot_empty' => '文件内容不能为空',
+            'file_does_not_exist' => '文件不存在',
+        ],
+        'offset' => '起始数',
+        'limit' => '条数',
+        'order' => '排序方式',
+        'sort' => '排序字段',
+        'start_at' => '开始日期',
+        'end_at' => '结束日期',
+        'select_at_least_one' => '至少选择一个 :data',
+        'error' => [
+            'json_error' => 'JSON 格式错误'
+        ]
+    ],
+    'permission' => [
+        'permission' => '目录/权限',
+        'pid' => '上级目录',
+        'name' => '权限标识',
+        'title' => '目录名称',
+        'icon' => '目录图标',
+        'path' => '目录路径',
+        'component' => '目录地址',
+        'guard_name' => '对应规则',
+        'sort'    =>  '目录排序',
+        'hidden'    =>  '目录显示',
+        'delete_pid'    =>  '请先删除下级目录',
+        'type' => '操作类型',
+        'change' => '您的权限已被更改',
+    ],
+    'role' => [
+        'id' => '角色',
+        'name' => '角色标识',
+        'permissions' => '权限/目录',
+        'guard_id' => '对应规则ID',
+        'change' => '您的角色已被更改',
+    ],
+    'admin' => [
+        'id' => '用户ID',
+        'name' => '用户名',
+        'status' => '状态',
+    ],
+    'activity' => [
+        'log_name' => '日志名称',
+        'description' => '描述',
+        'subject_id' => '影响ID',
+        'subject_type' => '影响类型',
+        'causer_id' => '操作者ID',
+        'causer_type' => '操作者类型',
+        'properties' => '属性',
+    ],
+    'exception' => [
+        'message' => '错误信息',
+        'id' => '错误ID',
+        'solve' => '修复值',
+        'file' => '文件',
+    ],
+    'user' => [
+        'name' => '用户名',
+    ],
+    'file' => [
+        'file' => '文件',
+        'name' => '文件名',
+        'directory' => '文件夹路径',
+        'not_found' => '文件不存在'
+    ],
+    'notification' => [
+        'message' => '信息',
+        'is_read' => '是否已读',
+        'admins' => '管理员'
+    ],
+    'nginx' => [
+        'file' => '文件',
+        'ip' => 'Ip',
+        'method' => '请求类型',
+        'uri' => '请求地址',
+        'http_code' => 'CODE码',
+        'is_warning' => '警告',
+        'is_error' => '错误',
+        'is_robot' => '机器',
+        'is_mobile' => '手机',
+    ],
+    'dict_type' => [
+        'name' => '字典名称',
+        'type' => '字典类型',
+        'status' => '字典状态',
+        'remark' => '字典备注',
+    ],
+    'dict_data' => [
+        'dict_type_id' => '字典 ID',
+        'sort' => '字典排序',
+        'label' => '字典标签',
+        'value' => '字典键值',
+        'list_class' => '表格回显样式',
+        'default' => '默认',
+        'status' => '状态',
+        'remark' => '备注',
+        'list_class_type' => [
+            'default' => '默认',
+            'primary' => '主要',
+            'success' => '成功',
+            'info' => '信息',
+            'warning' => '警告',
+            'danger' => '危险',
+        ]
+    ],
+    'gen' => [
+        'table' => '表',
+        'name' => '表名称',
+        'comment' => '表描述',
+        'pid' => '所属分类',
+        'engine' => '表引擎',
+        'charset' => '字符集',
+        'collation' => '排序规则',
+        'created_at_start' => '创建时间开始',
+        'created_at_end' => '创建时间结束',
+        'updated_at_start' => '更新时间开始',
+        'updated_at_end' => '更新时间结束',
+        'gen_table_columns' => '配置项',
+        'top_nav' => '顶级分类'
+    ],
+    'config' => [
+        'type' => '类型',
+        'aliOss' => [
+            'access_key_id' => '标识用户',
+            'access_key_secret' => '验证用户的密钥',
+            'bucket_name' => '存储空间名称',
+            'endpoint' => '地域节点',
+            'fail' => '保存阿里云OSS配置失败，原因：:message',
+            'bucket_not_exists' => '保存阿里云OSS配置失败，原因：存储空间名称不存在'
+        ],
+        'dingTalk' => [
+            'open' => '钉钉登录',
+            'client_id' => 'AppKey',
+            'client_secret' => 'AppSecret',
+            'corp_id' => 'corpId',
+            'redirect_uri' => '回调URL',
+            'redirect_bind_uri' => '绑定回调URL',
+            'fail' => '保存钉钉登录配置失败，原因：:message',
+        ],
+        'wechat' => [
+            'open' => '微信登录',
+            'offiaccount_appid' => 'Appid',
+            'offiaccount_appsecret' => 'AppSecret',
+            'offiaccount_redirect_uri' => '回调地址',
+            'oplatform_appid' => 'Appid',
+            'oplatform_appsecret' => 'AppSecret',
+            'oplatform_redirect_uri' => '回调地址',
+            'fail' => '保存微信登录配置失败，原因：:message',
+        ],
+        'wechatPay' => [
+            'api_v3key' => 'APIv3密钥',
+            'zip' => '商户证书压缩包',
+            'zip_fail' => '解压失败',
+            'zip_miss_file' => '压缩包缺少文件 :data',
+            'appid' => 'APPID',
+            'notify_url' => '回调域名',
+        ]
+    ],
+];
