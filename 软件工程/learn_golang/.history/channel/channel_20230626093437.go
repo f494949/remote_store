@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	s := []int{7, 9, 10, -8, 4, 6}
 	c := make(chan int)
-	go sum(s[:len(s)/2], c) // 26
+	go sum(s[:len(s)/2], c) //26
 	go sum(s[len(s)/2:], c) // 2
 	x, y := <-c, <-c
 	fmt.Println(x, y, x+y)
