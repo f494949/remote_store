@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-package leetcode
+
 
 func maximumSum(arr []int) int {
 	dp0, dp1, sum := arr[0], 0, arr[0]
